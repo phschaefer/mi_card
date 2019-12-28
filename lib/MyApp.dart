@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -21,6 +22,36 @@ class MyApp extends StatelessWidget {
               ),
               buildPhone(),
               buildEMail(),
+              Padding(
+                padding: const EdgeInsets.all(16.0),
+                child: Column(
+                  children: <Widget>[
+                    Text(
+                      'SKILLS',
+                      style: TextStyle(
+                        fontFamily: 'Source Sans Pro',
+                        fontSize: 25.0,
+                        letterSpacing: 2.5,
+                        fontWeight: FontWeight.bold,
+                        color: Colors.white,
+                      ),
+                    ),
+                    SizedBox(
+                      height: 20.0,
+                      width: 150.0,
+                      child: Divider(
+                        color: Colors.white,
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+              buildSkillAttribute('Java'),
+              buildSkillAttribute('JavaEE'),
+              buildSkillAttribute('Kotlin'),
+              buildSkillAttribute('Android'),
+              buildSkillAttribute('Flutter'),
+              buildSkillAttribute('Python'),
             ],
           ),
         ),
@@ -28,73 +59,86 @@ class MyApp extends StatelessWidget {
     );
   }
 
+  Text buildSkillAttribute(String attribute) {
+    return Text(
+      attribute,
+      style: TextStyle(
+        fontFamily: 'Source Sans Pro',
+        fontSize: 20.0,
+        letterSpacing: 2.5,
+        fontWeight: FontWeight.bold,
+        color: Colors.white,
+      ),
+    );
+  }
+
   CircleAvatar buildCirclePicture() {
     return CircleAvatar(
-              radius: 50.0,
-              backgroundImage: AssetImage('images/pic.jpg'),
-            );
+      radius: 50.0,
+      backgroundImage: AssetImage('images/pic.jpg'),
+    );
   }
 
   Card buildEMail() {
     return Card(
-              margin: EdgeInsets.symmetric(vertical: 10.0, horizontal: 25.0),
-              child: ListTile(
-                leading: Icon(
-                  Icons.email,
-                  color: Colors.teal,
-                ),
-                title: Text(
-                  'ph.schaefer@protonmail.com',
-                  style: TextStyle(
-                      color: Colors.teal.shade900,
-                      fontFamily: 'Source Sans Pro',
-                      fontSize: 20.0),
-                ),
-              ),
-            );
+      margin: EdgeInsets.symmetric(vertical: 10.0, horizontal: 25.0),
+      child: ListTile(
+        leading: Icon(
+          Icons.email,
+          color: Colors.teal,
+        ),
+        title: Text(
+          'ph.schaefer@protonmail.com',
+          style: TextStyle(
+              color: Colors.teal.shade900,
+              fontFamily: 'Source Sans Pro',
+              fontSize: 20.0),
+        ),
+      ),
+    );
   }
 
   Text buildTitle() {
     return Text(
-              'FULLSTACK-DEVELOPER',
-              style: TextStyle(
-                fontFamily: 'Source Sans Pro',
-                fontSize: 20.0,
-                letterSpacing: 2.5,
-                fontWeight: FontWeight.bold,
-                color: Colors.white,
-              ),
-            );
+      'FULLSTACK-DEVELOPER',
+      style: TextStyle(
+        fontFamily: 'Source Sans Pro',
+        fontSize: 20.0,
+        letterSpacing: 2.5,
+        fontWeight: FontWeight.bold,
+        color: Colors.white,
+      ),
+    );
   }
 
   Card buildPhone() {
     return Card(
-              margin: EdgeInsets.symmetric(vertical: 10.0, horizontal: 25.0),
-              child: ListTile(
-                leading: Icon(
-                  Icons.phone,
-                  color: Colors.teal,
-                ),
-                title: Text(
-                  '+49 15731652390',
-                  style: TextStyle(
-                      color: Colors.teal.shade900,
-                      fontFamily: 'Source Sans Pro',
-                      fontSize: 20.0),
-                ),
-              ),
-            );
+      margin: EdgeInsets.symmetric(vertical: 10.0, horizontal: 25.0),
+      child: ListTile(
+        leading: Icon(
+          Icons.phone,
+          color: Colors.teal,
+        ),
+        title: Text(
+          '+49 15731652390',
+          style: TextStyle(
+              color: Colors.teal.shade900,
+              fontFamily: 'Source Sans Pro',
+              fontSize: 20.0),
+        ),
+      ),
+    );
   }
 
   Text buildName() {
     return Text(
-              'Philipp Schäfer',
-              style: TextStyle(
-                fontFamily: 'Girassol',
-                fontSize: 40.0,
-                color: Colors.white,
-                fontWeight: FontWeight.bold,
-              ),
-            );
+      'Philipp Schäfer',
+      style: TextStyle(
+        fontFamily: 'Girassol',
+        fontSize: 40.0,
+        color: Colors.white,
+        fontWeight: FontWeight.bold,
+      ),
+    );
   }
 }
