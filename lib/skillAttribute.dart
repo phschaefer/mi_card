@@ -1,12 +1,13 @@
 import 'package:flutter/material.dart';
 
 class SkillAttribute extends StatelessWidget {
+
+  final String attribute;
+
+  SkillAttribute(this.attribute);
+
   @override
   Widget build(BuildContext context) {
-    return buildSkillAttribute('');
-  }
-
-  Text buildSkillAttribute(String attribute) {
     return Text(
       attribute,
       style: TextStyle(

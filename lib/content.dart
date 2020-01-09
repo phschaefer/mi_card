@@ -15,7 +15,7 @@ class Content extends StatelessWidget {
           buildPhone('+49 15731652390'),
           buildEMail('ph.schaefer@protonmail.com'),
           skillText('SKILLS'),
-          SkillAttribute(),
+          SkillAttribute('Python'),
         ],
       ),
     );
