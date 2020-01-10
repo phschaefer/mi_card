@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:mi_card/skillAttribute.dart';
+import 'package:mi_card/data.dart';
 
 class Content extends StatelessWidget {
   @override
@@ -8,14 +8,14 @@ class Content extends StatelessWidget {
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: <Widget>[
-          buildCirclePicture('images/pic.jpg'),
-          buildName('Philipp Schäfer'),
-          buildTitle('FULLSTACK-DEVELOPER'),
+          buildCirclePicture(Data().getPersonModel.image),
+          buildName(Data().getPersonModel.name),
+          buildTitle(Data().getPersonModel.title),
           sBox(150.0, 20.0),
-          buildPhone('+49 15731652390'),
-          buildEMail('ph.schaefer@protonmail.com'),
+          buildPhone(Data().getPersonModel.phoneNumber),
+          buildEMail(Data().getPersonModel.emailAddress),
           skillText('SKILLS'),
-          SkillAttribute('Python'),
+          //SkillAttribute(Data().getPersonModel.skills),
         ],
       ),
     );
