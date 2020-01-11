@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:mi_card/data.dart';
+import 'package:mi_card/skillAttribute.dart';
 
 class Content extends StatelessWidget {
   @override
@@ -15,7 +16,7 @@ class Content extends StatelessWidget {
           buildPhone(Data().getPersonModel.phoneNumber),
           buildEMail(Data().getPersonModel.emailAddress),
           skillText('SKILLS'),
-          //SkillAttribute(Data().getPersonModel.skills),
+          SkillAttribute(Data().getPersonModel.skills),
         ],
       ),
     );

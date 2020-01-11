@@ -7,7 +7,7 @@ class Data {
       'MOBILE-DEVELOPER',
       '+49 15731652390',
       'ph.schaefer@protonmail.com',
-      ['Java', 'JavaEE', 'Android', 'Flutter', 'Python']);
+      ["Java", "JavaEE", "Android", "Flutter", "Python"]);
 
   PersonModel get getPersonModel => _personModel;
 }
